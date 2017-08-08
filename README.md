@@ -1,4 +1,5 @@
 # aws ssh socks
+- aws ec2 host
 - one ssh command to setup a local socks proxy
 - run on linux/mac 
 - run heartbeat.sh periodly (example: put it into crontab, and run it every one minute, using * * * * * ) 
