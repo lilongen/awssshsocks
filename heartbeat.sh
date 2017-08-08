@@ -4,8 +4,9 @@
 D="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 source $D/vars.sh
 
-res=$(curl --proxy socks5h://localhost:12306 http://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png -I -w %{http_code} -s -o /dev/null)
-if [ "$res" = "200" ]; then
+resource="http://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+ret=$(curl --proxy socks5h://localhost:12306 $resource -I -w %{http_code} -s -o /dev/null)
+if [ "$ret" = "200" ]; then
 	exit 0
 fi
 
