@@ -12,4 +12,3 @@ fi
 
 pkill -9 -f 'ec2-user'
 ssh -g -f -N -D 0.0.0.0:12306 -i $awsHostKey ec2-user@$awsHost 2&>/dev/null
-pgrep -l -f 'ec2-user'
