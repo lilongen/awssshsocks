@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 
-D="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
+D="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source $D/vars.sh
 
 resource="http://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
